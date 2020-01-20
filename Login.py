@@ -1,7 +1,8 @@
 import sys
 
 from PyQt5.QtWidgets import QMainWindow, QApplication
-from login import Ui_MainWindow
+from login_pane import Ui_MainWindow
+
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
@@ -14,6 +15,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                Slot documentation goes here.
         """
         # TODO: not implemented yet
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
