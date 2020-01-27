@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>30</y>
-     <width>241</width>
-     <height>45</height>
+     <y>14</y>
+     <width>181</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -57,8 +57,8 @@
     <widget class="QListView" name="listView">
      <property name="geometry">
       <rect>
-       <x>-5</x>
-       <y>-9</y>
+       <x>0</x>
+       <y>0</y>
        <width>621</width>
        <height>231</height>
       </rect>
@@ -99,7 +99,7 @@
     </widget>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>40</x>
