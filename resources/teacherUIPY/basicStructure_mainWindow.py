@@ -10,7 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
+class basicStructure(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1178, 642)
@@ -105,4 +105,4 @@ class Ui_MainWindow(object):
         self.menuAbout.setTitle(_translate("MainWindow", "About"))
         self.actionEdit.setText(_translate("MainWindow", "Edit"))
         self.actionAbout_2.setText(_translate("MainWindow", "About"))
-import images_rc
+import resources.images_rc
