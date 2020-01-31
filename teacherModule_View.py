@@ -9,6 +9,17 @@ class teacherModule_View(QMainWindow, basicStructure):
         self.tmCtr = None
         self.setupUi(self)
 
+    # back to last page
+    def backTo(self):
+        pass
+
+    # back to home page
+    def home(self):
+        pass
+
+    # teacher info button
+    def TeacherInfo(self):
+        pass
 
 # test code
 if __name__ == "__main__":
