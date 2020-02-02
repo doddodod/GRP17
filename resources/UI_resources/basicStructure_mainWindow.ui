@@ -6,8 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< Updated upstream
     <width>1178</width>
     <height>642</height>
+=======
+    <width>1040</width>
+    <height>670</height>
+>>>>>>> Stashed changes
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,8 +42,13 @@
         <rect>
          <x>0</x>
          <y>0</y>
+<<<<<<< Updated upstream
          <width>1176</width>
          <height>534</height>
+=======
+         <width>1038</width>
+         <height>562</height>
+>>>>>>> Stashed changes
         </rect>
        </property>
       </widget>
@@ -62,6 +72,7 @@
        <property name="bottomMargin">
         <number>11</number>
        </property>
+<<<<<<< Updated upstream
        <item row="0" column="1">
         <spacer name="horizontalSpacer_2">
          <property name="orientation">
@@ -97,6 +108,17 @@
           <widget class="QLineEdit" name="lineEdit_4"/>
          </item>
         </layout>
+=======
+       <item row="0" column="0">
+        <widget class="QToolButton" name="toolButton">
+         <property name="styleSheet">
+          <string notr="true">border-image: url(:/all/images/backIcon.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+>>>>>>> Stashed changes
        </item>
        <item row="0" column="2">
         <widget class="QToolButton" name="toolButton_2">
@@ -111,6 +133,7 @@
          </property>
         </widget>
        </item>
+<<<<<<< Updated upstream
        <item row="0" column="0">
         <widget class="QToolButton" name="toolButton">
          <property name="styleSheet">
@@ -121,6 +144,8 @@
          </property>
         </widget>
        </item>
+=======
+>>>>>>> Stashed changes
        <item row="0" column="3">
         <spacer name="horizontalSpacer">
          <property name="orientation">
@@ -134,18 +159,10 @@
          </property>
         </spacer>
        </item>
+<<<<<<< Updated upstream
        <item row="0" column="6">
         <widget class="QLabel" name="label_2">
-         <property name="font">
-          <font>
-           <underline>true</underline>
-          </font>
-         </property>
-         <property name="text">
-          <string>TeacherInfo</string>
-         </property>
-        </widget>
-       </item>
+=======
        <item row="0" column="5">
         <spacer name="horizontalSpacer_3">
          <property name="orientation">
@@ -162,6 +179,73 @@
          </property>
         </spacer>
        </item>
+       <item row="0" column="6">
+        <widget class="QToolButton" name="toolButton_4">
+>>>>>>> Stashed changes
+         <property name="font">
+          <font>
+           <underline>true</underline>
+          </font>
+         </property>
+<<<<<<< Updated upstream
+=======
+         <property name="styleSheet">
+          <string notr="true">background: transparent;</string>
+         </property>
+>>>>>>> Stashed changes
+         <property name="text">
+          <string>TeacherInfo</string>
+         </property>
+        </widget>
+       </item>
+<<<<<<< Updated upstream
+       <item row="0" column="5">
+        <spacer name="horizontalSpacer_3">
+=======
+       <item row="0" column="1">
+        <spacer name="horizontalSpacer_2">
+>>>>>>> Stashed changes
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+<<<<<<< Updated upstream
+           <width>100</width>
+=======
+           <width>30</width>
+>>>>>>> Stashed changes
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+<<<<<<< Updated upstream
+=======
+       <item row="0" column="4">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QToolButton" name="toolButton_3">
+           <property name="styleSheet">
+            <string notr="true">border-image:url(:/all/images/searchIcon.png)</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_4"/>
+         </item>
+        </layout>
+       </item>
+>>>>>>> Stashed changes
       </layout>
      </widget>
     </item>
@@ -173,7 +257,11 @@
     <rect>
      <x>0</x>
      <y>0</y>
+<<<<<<< Updated upstream
      <width>1178</width>
+=======
+     <width>1040</width>
+>>>>>>> Stashed changes
      <height>26</height>
     </rect>
    </property>
@@ -185,15 +273,26 @@
    <widget class="QMenu" name="menuAbout">
     <property name="geometry">
      <rect>
+<<<<<<< Updated upstream
       <x>471</x>
       <y>197</y>
       <width>169</width>
       <height>54</height>
+=======
+      <x>430</x>
+      <y>266</y>
+      <width>169</width>
+      <height>78</height>
+>>>>>>> Stashed changes
      </rect>
     </property>
     <property name="title">
      <string>About</string>
     </property>
+<<<<<<< Updated upstream
+=======
+    <addaction name="actionAbout_Us"/>
+>>>>>>> Stashed changes
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuAbout"/>
@@ -208,9 +307,75 @@
     <string>About</string>
    </property>
   </action>
+<<<<<<< Updated upstream
+=======
+  <action name="actionAbout_Us">
+   <property name="text">
+    <string>About Us</string>
+   </property>
+  </action>
+>>>>>>> Stashed changes
  </widget>
  <resources>
   <include location="../images.qrc"/>
  </resources>
+<<<<<<< Updated upstream
  <connections/>
+=======
+ <connections>
+  <connection>
+   <sender>toolButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>backTo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>23</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-3</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>home()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-8</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>TeacherInfo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>965</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1041</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>backTo()</slot>
+  <slot>home()</slot>
+  <slot>TeacherInfo()</slot>
+ </slots>
+>>>>>>> Stashed changes
 </ui>
