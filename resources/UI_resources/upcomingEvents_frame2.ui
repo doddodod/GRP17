@@ -59,7 +59,7 @@
           <number>7</number>
          </property>
          <item>
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QPushButton" name="leftPage_pushButton">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
              <horstretch>40</horstretch>
@@ -81,7 +81,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_5">
+          <widget class="QPushButton" name="rightPage_pushButton">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
              <horstretch>40</horstretch>
@@ -121,7 +121,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3">
+          <widget class="QLineEdit" name="showNum_lineEdit">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
              <horstretch>0</horstretch>
@@ -169,5 +169,59 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>showNum_lineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Frame</receiver>
+   <slot>editShowNum()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>517</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>113</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leftPage_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Frame</receiver>
+   <slot>leftPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>513</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>298</x>
+     <y>575</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rightPage_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Frame</receiver>
+   <slot>rightPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>513</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>358</x>
+     <y>613</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>editShowNum()</slot>
+  <slot>leftPage()</slot>
+  <slot>rightPage()</slot>
+ </slots>
 </ui>

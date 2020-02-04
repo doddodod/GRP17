@@ -16,13 +16,12 @@ class login_View(QMainWindow, login_MainWindow):
         self.pushButton.clicked.connect(self.login)
         self.toolButton.clicked.connect(self.forgetPwd)
 
+        # hintLabel
+        self.hintLabel.setText(" Login ? ")
+
     def login(self):
         print("login")
         self.login_Signal.emit()
-        """
-               Slot documentation goes here.
-        """
-        # TODO: not implemented yet
 
     def forgetPwd(self):
         self.forgetPwd_Signal.emit()
