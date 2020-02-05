@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.Qt import *
-from teacherModule_pane import Ui_MainWindow
+from Demo.teacherModule_pane import Ui_MainWindow
 
 
 class teacherModule_Pane(QMainWindow, Ui_MainWindow):

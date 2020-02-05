@@ -1,13 +1,23 @@
-from teacherModule_View import teacherModule_View
-from teacherModule_Ctr import teacherModule_Ctr
+from ModulePage_View import modulePage_view
+from basicMainWindow_View import basicMainWindow_view
+from basicMainWindow_Ctr import basicMainWindow_Ctr
+
+'''Login Controller is used for create main Window and show corresponding frames based on the main Window'''
 
 class login_Ctr():
 
     def __init__(self):
         # bindModel = login_Model()
         self.loginView = None
-        self.tmView = teacherModule_View()
-        self.tmCtr = teacherModule_Ctr()
+
+        # create main window, set view and controller
+        mainWindow = basicMainWindow_view()
+        mainWindowCtr = basicMainWindow_Ctr()
+        mainWindowCtr.setView(mainWindow)
+
+        # pass main window to corresponding page class for use
+        self.tmView = modulePage_view()
+        self.tmView.setMainWindow(mainWindow)
 
 
     def setView(self,loginView):
@@ -20,7 +30,6 @@ class login_Ctr():
 
     def enterMainPage(self):
         self.loginView.hide()
-        self.tmCtr.setView(self.tmView)
         self.tmView.show()
 
 
