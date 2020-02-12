@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import QApplication
 from ModuleFrame1_View import moduleFrame1_view
 from ModuleFrame1_Model import moduleFrame1_Model
-from upcomingEvent_Model import upcomingEvent_Model
 from upcomingEvent_View import upcomingEvent_view
+from upcomingEvent_Model import upcomingEvent_Model
 import sys
 
 
@@ -23,19 +23,18 @@ class modulePage_view():
         self.moduleFrame = moduleFrame1_view()
         self.upcomingFrame = upcomingEvent_view()
 
-        # set up module frame
         self.moduleFrame.setupUi(self.window.frame1)
         self.moduleFrame.refresh()
         moduleModel = moduleFrame1_Model()
         self.moduleFrame.listView.setModel(moduleModel)
 
-        # set up upcoming event frame
         self.upcomingFrame.setupUi(self.window.frame_2)
         upModel = upcomingEvent_Model()
         self.upcomingFrame.listView_2.setModel(upModel)
 
 
-# previous test code
+
+# test code
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     mainWindow = modulePage_view()
