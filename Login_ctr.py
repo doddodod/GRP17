@@ -1,4 +1,4 @@
-from ModulePage_View import modulePage_view
+from ModulePage_View_YGH import modulePage_view
 from basicMainWindow_View import basicMainWindow_view
 from basicMainWindow_Ctr import basicMainWindow_Ctr
 
@@ -10,6 +10,15 @@ class login_Ctr():
         # bindModel = login_Model()
         self.loginView = None
 
+        # create main window, set view and controller
+        self.mainWindow = basicMainWindow_view()
+        self.mainWindowCtr = basicMainWindow_Ctr()
+        self.mainWindowCtr.setView(self.mainWindow)
+
+        # pass main window to corresponding page class for use
+        self.tmView = modulePage_view()
+        self.tmView.setMainWindow(self.mainWindow)
+
     def setView(self,loginView):
         self.loginView = loginView
         self.connectSlot()
@@ -19,14 +28,6 @@ class login_Ctr():
 
 
     def enterMainPage(self):
-        # create main window, set view and controller
-        self.mainWindow = basicMainWindow_view()
-        self.mainWindowCtr = basicMainWindow_Ctr()
-        self.mainWindowCtr.setView(self.mainWindow)
-
-        # pass main window to corresponding page class for use
-        self.tmView = modulePage_view()
-        self.tmView.setMainWindow(self.mainWindow)
         self.loginView.hide()
         self.tmView.show()
 
