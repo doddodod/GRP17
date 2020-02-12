@@ -5,14 +5,14 @@ from resources.teacherUIPY.basicStructure_frame1 import Ui_Frame
 import sys
 
 
-class sessiongFrame1_View(QFrame,Ui_Frame):
+class sessionFrame1_View(QFrame,Ui_Frame):
 
     def __init__(self):
         # setup UI
-        super(sessiongFrame1_View, self).__init__()
+        super(sessionFrame1_View, self).__init__()
         self.setupUi(self)
         # self.refresh()
-
+        
     def refresh(self):
         self.frameName_TBS.setText("Teaching Session")
         self.setSlot()

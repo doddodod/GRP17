@@ -171,4 +171,8 @@
  </widget>
  <resources/>
  <connections/>
+ <slots>
+  <slot>starting()</slot>
+  <slot>start()</slot>
+ </slots>
 </ui>

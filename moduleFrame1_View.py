@@ -1,15 +1,19 @@
 from PyQt5.QtWidgets import QFrame, QApplication
+
 from resources.teacherUIPY.basicStructure_frame1 import Ui_Frame
 import sys
 
 
 class moduleFrame1_view(QFrame, Ui_Frame):
 
+    
+
     def __init__(self):
         # setup UI
         super(moduleFrame1_view, self).__init__()
         self.setupUi(self)
         # self.refresh()
+
 
     def refresh(self):
         self.frameName_TBS.setText("Module")
