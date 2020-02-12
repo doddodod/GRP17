@@ -2,6 +2,10 @@ from PyQt5.QtWidgets import QFrame, QApplication
 from resources.teacherUIPY.basicStructure_frame1 import Ui_Frame
 import sys
 
+#test
+from ModuleFrame1_Model import moduleFrame1_Model
+from ModuleFrame_Delegate import moduleFrame_Deletagte
+
 
 class moduleFrame1_view(QFrame, Ui_Frame):
 
@@ -56,6 +60,12 @@ class moduleFrame1_view(QFrame, Ui_Frame):
 # test code
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+
     test = moduleFrame1_view()
+    model = moduleFrame1_Model()
+    delegate = moduleFrame_Deletagte()
+
+    test.listView.setItemDelegateForRow(0,delegate)
+    test.listView.setModel(model)
     test.show()
     sys.exit(app.exec_())

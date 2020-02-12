@@ -18,7 +18,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="lineDispaly_widget_2" native="true">
+  <widget class="QWidget" name="lineDispaly_widget" native="true">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -28,6 +28,26 @@
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QToolButton" name="toolButton">
+      <property name="text">
+       <string>line_content</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>298</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
     <item row="0" column="2">
      <layout class="QHBoxLayout" name="horizontalLayout_6">
       <item>
@@ -76,29 +96,80 @@
       </item>
      </layout>
     </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>line_content</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>298</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
    </layout>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>toolButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>modifyItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>614</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>deleteItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>644</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>633</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>starItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>683</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>662</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>linkTo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>153</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>102</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>modifyItem()</slot>
+  <slot>deleteItem()</slot>
+  <slot>starItem()</slot>
+  <slot>linkTo()</slot>
+ </slots>
 </ui>

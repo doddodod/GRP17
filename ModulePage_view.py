@@ -1,30 +1,43 @@
-from resources.teacherUIPY.Ui_basicStructure_mainWindow import basicStructure
-from resources.teacherUIPY.Ui_upcomingEvents_frame2 import UpcomingEvents
-from resources.teacherUIPY.Ui_modulePage_frame1 import ModulePage
-from PyQt5.Qt import *
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QApplication
+from ModuleFrame1_View import moduleFrame1_view
+from ModuleFrame1_Model import moduleFrame1_Model
+from upcomingEvent_Model import upcomingEvent_Model
+from upcomingEvent_View import upcomingEvent_view
 import sys
 
-class ModulePage_View(QMainWindow, basicStructure):
-    def __init__(self):
-        super(ModulePage_View, self).__init__()
-        self.mpView = None
-        self.setupUi(self)
-        #self.ui = ModulePage()
-        #self.ui.setupUi(basicStructure.frame)
-        self.Module = ModulePage()
-        self.Module.setupUi(self.frame)
-        #self.MaingridLayout.addChildWidget(self.ui)
-        #self.pushButton_4.clicked.connect(self.seView)
-        self.Event = UpcomingEvents()
-        self.Event.setupUi(self.frame_2)
-    
-    def setView():
-        print("work")
 
-#test
+class modulePage_view():
+
+    def __init__(self):
+        super(modulePage_view, self).__init__()
+        self.window = None
+
+    def show(self):
+       self.window.show()
+
+    def setMainWindow(self,mainWindow):
+        self.window = mainWindow
+        self.setupMyUI()
+
+    def setupMyUI(self):
+        self.moduleFrame = moduleFrame1_view()
+        self.upcomingFrame = upcomingEvent_view()
+
+        # set up module frame
+        self.moduleFrame.setupUi(self.window.frame1)
+        self.moduleFrame.refresh()
+        moduleModel = moduleFrame1_Model()
+        self.moduleFrame.listView.setModel(moduleModel)
+
+        # set up upcoming event frame
+        self.upcomingFrame.setupUi(self.window.frame_2)
+        upModel = upcomingEvent_Model()
+        self.upcomingFrame.listView_2.setModel(upModel)
+
+
+# previous test code
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    mainWindow = ModulePage_View()
+    mainWindow = modulePage_view()
     mainWindow.show()
     sys.exit(app.exec_())

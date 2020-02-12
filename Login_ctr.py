@@ -11,13 +11,13 @@ class login_Ctr():
         self.loginView = None
 
         # create main window, set view and controller
-        mainWindow = basicMainWindow_view()
-        mainWindowCtr = basicMainWindow_Ctr()
-        mainWindowCtr.setView(mainWindow)
+        self.mainWindow = basicMainWindow_view()
+        self.mainWindowCtr = basicMainWindow_Ctr()
+        self.mainWindowCtr.setView(self.mainWindow)
 
         # pass main window to corresponding page class for use
         self.tmView = modulePage_view()
-        self.tmView.setMainWindow(mainWindow)
+        self.tmView.setMainWindow(self.mainWindow)
 
 
     def setView(self,loginView):
