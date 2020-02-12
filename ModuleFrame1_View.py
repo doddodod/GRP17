@@ -13,13 +13,17 @@ class moduleFrame1_view(QFrame, Ui_Frame):
         # setup UI
         super(moduleFrame1_view, self).__init__()
         self.setupUi(self)
-        # self.refresh()
+        self.listView.clicked.connect(self.clickedList)
 
     def refresh(self):
         self.frameName_TBS.setText("Module")
         self.search_lineEdit.hide()
         self.search_toolButton.hide()
         self.addButton.hide()
+
+    def clickedList(self, qModelIndex):
+        # TODO: jump to the page
+        print("you choosed "+ str(qModelIndex.row()))
 
     def print(self):
         print("print recording")
@@ -62,10 +66,9 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     test = moduleFrame1_view()
-    model = moduleFrame1_Model()
     delegate = moduleFrame_Deletagte()
-
-    test.listView.setItemDelegateForRow(0,delegate)
+    model = moduleFrame1_Model()
     test.listView.setModel(model)
+    test.listView.setItemDelegateForRow(0,delegate)
     test.show()
     sys.exit(app.exec_())

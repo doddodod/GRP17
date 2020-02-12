@@ -12,29 +12,29 @@ class moduleFrame_Deletagte(QStyledItemDelegate):
 
     def createEditor(self, parent: QWidget,
                      option: 'QStyleOptionViewItem',
-                     index: QtCore.QModelIndex):
+                     index: QtCore.QModelIndex) :
         # edit the lineWidget for module page
-        editor = lineWidget()
+        editor = lineWidget(parent)
         editor.toolButton_8.hide()
         editor.toolButton_9.hide()
-        editor.setMinimumHeight(45)
-        # .toolButton_10.clicked().connect(self.starItem)
+        # editor.toolButton_10.clicked.connect(editor.enterEvent())
         return editor
 
     # load data to editor from model
     def setEditorData(self, editor: lineWidget, index: QtCore.QModelIndex):
         print("here")
         value = index.model().data(index, Qt.DisplayRole)
-        editor.label_6.setText(str(value))
+        editor.lineEdit.setText(str(value.value()))
 
     # load data to model from editor
     def setModelData(self, editor: lineWidget, model, index):
-        model.setData(index,editor.label_6.text())
+        model.setData(index,editor.lineEdit.text())
 
     # set geometry for editor
     def updateEditorGeometry(self, editor: lineWidget, option: 'QStyleOptionViewItem', index: QtCore.QModelIndex):
         editor.setGeometry(option.rect)
 
 
-    def starItem(self,index):
-        print("start item"+index)
+
+    def starItem(self):
+        print("start item")
