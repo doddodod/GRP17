@@ -12,6 +12,10 @@ class lineWidget(QWidget):
         self.gridLayout = QtWidgets.QGridLayout(self)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
+        self.lineEdit = QtWidgets.QLineEdit(self)
+        self.lineEdit.setText("")
+        self.lineEdit.setObjectName("lineEdit")
+        self.gridLayout.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.toolButton_8 = QtWidgets.QToolButton(self)
@@ -34,16 +38,12 @@ class lineWidget(QWidget):
         self.toolButton_10.setObjectName("toolButton_10")
         self.horizontalLayout_6.addWidget(self.toolButton_10)
         self.gridLayout.addLayout(self.horizontalLayout_6, 0, 2, 1, 1)
-        self.label_6 = QtWidgets.QLabel(self)
-        self.label_6.setObjectName("label_6")
-        self.gridLayout.addWidget(self.label_6, 0, 0, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(298, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout.addItem(spacerItem, 0, 1, 1, 1)
 
         self.toolButton_8.setText("M")
         self.toolButton_9.setText("-")
         self.toolButton_10.setText("⭐")
-        self.label_6.setText("line_content")
 
 # test code
 if __name__ == "__main__":
@@ -51,7 +51,6 @@ if __name__ == "__main__":
     window = QMainWindow()
     window.resize(400,300)
     test = lineWidget(window)
-    test.toolButton_8.hide()
     test.setGeometry(10,10,300,150)
     window.show()
     sys.exit(app.exec_())

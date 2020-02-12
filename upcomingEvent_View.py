@@ -10,9 +10,7 @@ class upcomingEvent_view(QFrame, upcomingEvents_frame2):
     def __init__(self):
         # setup UI
         super(upcomingEvent_view, self).__init__()
-        # self.setupUi(self)
-        # self.model = upcomingEvent_Model()
-        # self.listView_2.setModel(self.model)
+        self.setupUi(self)
 
     def editShowNum(self):
         print("edit show num")
