@@ -1,6 +1,7 @@
 from PyQt5 import QtCore
-from PyQt5.QtWidgets import QFrame, QApplication, QMainWindow
+from PyQt5.QtWidgets import QFrame, QApplication, QMainWindow, QListView
 from resources.teacherUIPY.upcomingEvents_frame2 import upcomingEvents_frame2
+from upcomingEvent_Model import upcomingEvent_Model
 import sys
 
 
@@ -45,5 +46,9 @@ if __name__ == "__main__":
 
     test = upcomingEvent_view()
     test.setupUi(frame1)
+    model = upcomingEvent_Model()
+    test.listView_2.setModel(model)
+
     mainWindow.show()
+
     sys.exit(app.exec_())

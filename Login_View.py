@@ -32,6 +32,7 @@ class login_View(QMainWindow, login_MainWindow):
         # TODO: not implemented yet
 
 # test code
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     mainWindow = login_View()
