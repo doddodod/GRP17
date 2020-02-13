@@ -5,21 +5,20 @@ from PyQt5.QtWidgets import QStyledItemDelegate, QWidget
 from lineWidget_View import lineWidget
 
 
-class moduleFrame_Deletagte(QStyledItemDelegate):
+class sessionFrame_delegate(QStyledItemDelegate):
 
-    def __init__(self,parent=None):
-        QStyledItemDelegate.__init__(self,parent)
+    def __init__(self, parent=None):
+        QStyledItemDelegate.__init__(self, parent)
 
     def createEditor(self, parent: QWidget,
                      option: 'QStyleOptionViewItem',
                      index: QtCore.QModelIndex) :
         # edit the lineWidget for module page
         editor = lineWidget(parent)
-        editor.toolButton_8.hide()
-        editor.toolButton_9.hide()
 
-        # TODO: implementation of buttons on editor
+        # TODO: connect the buttons on editor to slots
         # editor.toolButton_10.clicked.connect(editor.enterEvent())
+
         return editor
 
     # load data to editor from model

@@ -1,4 +1,4 @@
-from ModulePage_View_YGH import modulePage_view
+from ModulePage_View import modulePage_view
 from basicMainWindow_View import basicMainWindow_view
 from basicMainWindow_Ctr import basicMainWindow_Ctr
 
@@ -7,6 +7,7 @@ from basicMainWindow_Ctr import basicMainWindow_Ctr
 class login_Ctr():
 
     def __init__(self):
+        # TODO: test login input, link to data
         # bindModel = login_Model()
         self.loginView = None
 
@@ -19,13 +20,12 @@ class login_Ctr():
         self.tmView = modulePage_view()
         self.tmView.setMainWindow(self.mainWindow)
 
-    def setView(self,loginView):
+    def setView(self, loginView):
         self.loginView = loginView
         self.connectSlot()
 
     def connectSlot(self):
         self.loginView.login_Signal.connect(self.enterMainPage)
-
 
     def enterMainPage(self):
         self.loginView.hide()

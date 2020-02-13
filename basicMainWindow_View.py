@@ -6,10 +6,13 @@ import sys
 
 class basicMainWindow_view(QMainWindow,  MainWindow_Structure):
 
+    # signals sent tp controller for operation
     backTo_Sig = pyqtSignal()
     home_Sig = pyqtSignal()
     searchStudent_Sig = pyqtSignal()
     teacherInfo_Sig = pyqtSignal()
+
+    #TODO: implementation of status bar
 
     def __init__(self):
         super(basicMainWindow_view, self).__init__()

@@ -17,6 +17,7 @@ class basicMainWindow_Ctr():
         self.bmView.home_Sig.connect(self.home)
         self.bmView.searchStudent_Sig.connect(self.searchStudent)
         self.bmView.teacherInfo_Sig.connect(self.clickTeacherInfo)
+
     def backTo(self):
         print("back to")
         """

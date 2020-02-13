@@ -1,8 +1,7 @@
 from resources.teacherUIPY.recording_totalframe import recording_totalframe
-import sys
 from PyQt5.QtCore import pyqtSignal
 from recordingFrame_ctr import recordingFrame_ctr
-from PyQt5.QtWidgets import QFrame, QApplication
+from PyQt5.QtWidgets import QFrame
 
 
 class recordingFrame_View(QFrame, recording_totalframe):
@@ -22,4 +21,3 @@ class recordingFrame_View(QFrame, recording_totalframe):
     def recording(self):
         print("works")
         self.start_Signal.emit()
-    

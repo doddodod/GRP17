@@ -1,11 +1,12 @@
 from recordingFrame_View import recordingFrame_View
-from upcomingEvent_View import upcomingEvent_view
+
 
 class recordingPage_View():
     def __init__(self):
         super(recordingPage_View, self).__init__()
 
         #connect with ctr
+        # TODO: controller of recording page
     
     def show(self):
         self.window.show()
