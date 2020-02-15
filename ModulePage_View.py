@@ -55,7 +55,7 @@ class modulePage_view(QMainWindow):
         self.moduleFrame.refresh()
 
         self.upcomingFrame.setupUi(self.window.frame_2)
-        self.upcomingFrame.listView_2.setModel(upcomingModel)
+        self.upcomingFrame.listView.setModel(upcomingModel)
 
     def goSession(self):
         # TODO: jump to the page
