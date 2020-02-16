@@ -1,56 +1,65 @@
-from PyQt5.QtWidgets import QMainWindow, QApplication,QFrame
-from moduleFrame1_View import moduleFrame1_view
-from upcomingEvent_View import upcomingEvent_view
-from ModulePage_ctr import ModulePage_ctr
-from PyQt5 import QtWidgets
-import sys
 from PyQt5.QtCore import pyqtSignal
-from PyQt5 import QtCore
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from ModuleFrame1_View import moduleFrame1_view
+from ModuleFrame1_Model import moduleFrame1_Model
+from ModuleFrame_Delegate import moduleFrame_Deletagte
+from upcomingEvent_View import upcomingEvent_view
+from upcomingEvent_Model import upcomingEvent_Model
+
+# jump by creating new window
+from ModulePage_Ctr import ModulePage_ctr
+
+import sys
+
 
 class modulePage_view(QMainWindow):
+
+    # jumping signal to controller - TBC
     enterSessionPage_Signal = pyqtSignal()
 
     def __init__(self):
         super(modulePage_view, self).__init__()
         self.window = None
-        #connect with Ctr
+
+        # connect with Ctr -TBC
         self.modulePageCtr = ModulePage_ctr()
         self.modulePageCtr.setCtr(self)
 
     def show(self):
-        self.window.show()
+       self.window.show()
 
+    # TBC
     def hide(self):
         self.window.hide()
 
-    def setMainWindow(self,mainWindow):
-        
+    def setMainWindow(self, mainWindow):
         self.window = mainWindow
         self.setupMyUI()
 
     def setupMyUI(self):
-        self.moduleFrame = moduleFrame1_view()
+        # build view, model, delegate
+        self.Frame1 = moduleFrame1_view()
+        moduleModel = moduleFrame1_Model()
+        moduleDelegate = moduleFrame_Deletagte()
+
+        # connect signal of frame to this page
+        self.Frame1.enterSessionPage_SignalToPage.connect(self.goSession)
+
         self.upcomingFrame = upcomingEvent_view()
-        '''
-        self.moduleFrameCtr = moduleFrame1_ctr()
-        self.upcomingFrameCtr = upcomingEvent_ctr()
-        '''
-        self.moduleFrame.setupUi(self.window.frame1)
-        self.moduleFrame.refresh()
+        upcomingModel = upcomingEvent_Model()
+
+        # set model and delegate for views
+        self.Frame1.setupUi(self.window.frame1)
+        self.Frame1.listView.setModel(moduleModel)
+        self.Frame1.listView.setItemDelegate(moduleDelegate)
+        self.Frame1.refresh()
+
         self.upcomingFrame.setupUi(self.window.frame_2)
-
-
-        #test button
-        self.btn = QtWidgets.QPushButton(self.window)
-        self.btn.setText("Jump1")
-        self.btn.setGeometry(40,150,650,50)
-        self.btn.clicked.connect(self.goSession)
-        #test button
+        self.upcomingFrame.listView.setModel(upcomingModel)
 
     def goSession(self):
-        print("Session")
+        # TODO: jump to the page
         self.enterSessionPage_Signal.emit()
-
 
 # test code
 if __name__ == "__main__":

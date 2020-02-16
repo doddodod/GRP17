@@ -7,18 +7,10 @@ from basicMainWindow_Ctr import basicMainWindow_Ctr
 class login_Ctr():
 
     def __init__(self):
+        # TODO: test login input, link to data
         # bindModel = login_Model()
         self.loginView = None
 
-    def setView(self,loginView):
-        self.loginView = loginView
-        self.connectSlot()
-
-    def connectSlot(self):
-        self.loginView.login_Signal.connect(self.enterMainPage)
-
-
-    def enterMainPage(self):
         # create main window, set view and controller
         self.mainWindow = basicMainWindow_view()
         self.mainWindowCtr = basicMainWindow_Ctr()
@@ -27,6 +19,17 @@ class login_Ctr():
         # pass main window to corresponding page class for use
         self.tmView = modulePage_view()
         self.tmView.setMainWindow(self.mainWindow)
+
+        self.mainWindowCtr.setWindow(self.tmView)
+
+    def setView(self, loginView):
+        self.loginView = loginView
+        self.connectSlot()
+
+    def connectSlot(self):
+        self.loginView.login_Signal.connect(self.enterMainPage)
+
+    def enterMainPage(self):
         self.loginView.hide()
         self.tmView.show()
 

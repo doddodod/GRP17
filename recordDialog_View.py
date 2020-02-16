@@ -1,8 +1,9 @@
 from resources.teacherUIPY.startRecord_dialog import startRecord_dialog
 from recordDialog_ctr import recordDialog_ctr
-import sys
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QDialog
+
+
 class recordDialog_View(QDialog, startRecord_dialog):
     startRecord_Signal = pyqtSignal()
 
@@ -16,5 +17,10 @@ class recordDialog_View(QDialog, startRecord_dialog):
 
         self.pushButton.clicked.connect(self.startRecord)
 
+    #for hide session window. pass session window to Dialog Ctr
+    def setSessionWindow(self, Session):
+        self.sessionWindow = Session
+
     def startRecord(self):
+        self.recordDialogCtr.hideSession(self.sessionWindow)
         self.startRecord_Signal.emit()

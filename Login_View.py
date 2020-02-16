@@ -6,6 +6,7 @@ import sys
 
 class login_View(QMainWindow, login_MainWindow):
 
+    # send signals to login controller to operate
     login_Signal = pyqtSignal()
     forgetPwd_Signal = pyqtSignal()
 
@@ -17,6 +18,7 @@ class login_View(QMainWindow, login_MainWindow):
         self.toolButton.clicked.connect(self.forgetPwd)
 
         # hintLabel
+        # TODO: provide login hint for user
         self.hintLabel.setText(" Login ? ")
 
     def login(self):
@@ -29,9 +31,10 @@ class login_View(QMainWindow, login_MainWindow):
         """
                Slot documentation goes here.
         """
-        # TODO: not implemented yet
+        # TODO: show the forget pw dialog
 
-# test code
+
+# test code for the single view
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     mainWindow = login_View()

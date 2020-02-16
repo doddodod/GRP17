@@ -1,6 +1,6 @@
-from PyQt5.QtCore import pyqtSignal
-import sys
+
 class recordingFrame_ctr():
+    
     def setCtr(self, recordingFrameView):
         self.recordingFrameView = recordingFrameView
         self.connectSlot()
@@ -13,4 +13,3 @@ class recordingFrame_ctr():
         '''
             slot document goes here
         '''
-        
