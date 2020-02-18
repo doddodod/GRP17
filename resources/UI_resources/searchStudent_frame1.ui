@@ -49,7 +49,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="frameName_TBS">
    <property name="geometry">
     <rect>
      <x>41</x>

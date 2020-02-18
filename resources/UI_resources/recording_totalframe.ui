@@ -48,7 +48,7 @@
           <number>30</number>
          </property>
          <item>
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="frameName_TBS">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -69,7 +69,7 @@
             </font>
            </property>
            <property name="text">
-            <string>ModuleName</string>
+            <string>ModuleName:</string>
            </property>
            <property name="margin">
             <number>10</number>
@@ -308,7 +308,24 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Frame</receiver>
+   <slot>start()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>738</x>
+     <y>607</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>564</x>
+     <y>656</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
   <slot>starting()</slot>
   <slot>start()</slot>
