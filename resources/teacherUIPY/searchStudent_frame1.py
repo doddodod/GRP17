@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'searchStudent_frame1.ui'
+# Form implementation generated from reading ui file '/Users/derrickyu/Desktop/GRP17-master/resources/UI_resources/searchStudent_frame1.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.0
+# Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -26,15 +26,15 @@ class Ui_Frame(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
-        self.label = QtWidgets.QLabel(Frame)
-        self.label.setGeometry(QtCore.QRect(41, 51, 251, 30))
+        self.frameName_TBS = QtWidgets.QLabel(Frame)
+        self.frameName_TBS.setGeometry(QtCore.QRect(41, 51, 251, 30))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label.setObjectName("label")
+        self.frameName_TBS.setFont(font)
+        self.frameName_TBS.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.frameName_TBS.setObjectName("frameName_TBS")
         self.toolButton_4 = QtWidgets.QToolButton(Frame)
         self.toolButton_4.setGeometry(QtCore.QRect(160, 100, 25, 25))
         self.toolButton_4.setStyleSheet("border-image:url(:/all/images/printIcon.png)")
@@ -50,8 +50,9 @@ class Ui_Frame(object):
         self.comboBox.setItemText(0, _translate("Frame", "Sort"))
         self.comboBox.setItemText(1, _translate("Frame", "ID"))
         self.comboBox.setItemText(2, _translate("Frame", "Name"))
-        self.label.setText(_translate("Frame", "Student Name"))
+        self.frameName_TBS.setText(_translate("Frame", "Student Name"))
 import resources.images_rc
+
 
 if __name__ == "__main__":
     import sys
