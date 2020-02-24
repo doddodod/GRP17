@@ -93,7 +93,7 @@ class Ui_Frame(object):
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
 
         self.retranslateUi(Frame)
-        self.comboBox.currentTextChanged['QString'].connect(Frame.sort)
+        self.comboBox.currentTextChanged['QString'].connect(self.sort)
         QtCore.QMetaObject.connectSlotsByName(Frame)
 
     def retranslateUi(self, Frame):
