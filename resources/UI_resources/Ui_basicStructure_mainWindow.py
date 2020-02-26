@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'basicStructure_mainWindow.ui'
+# Form implementation generated from reading ui file '/Users/derrickyu/Desktop/GRP17-master/resources/UI_resources/basicStructure_mainWindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.0
+# Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -10,7 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class MainWindow_Structure(object):
+class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1397, 639)
@@ -285,4 +285,14 @@ class MainWindow_Structure(object):
         self.actionSettings.setText(_translate("MainWindow", "Open"))
         self.actionOpen.setText(_translate("MainWindow", "Open"))
         self.actionGuide.setText(_translate("MainWindow", "Guide"))
-import resources.images_rc
+import images_rc
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

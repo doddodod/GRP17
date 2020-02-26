@@ -25,11 +25,10 @@ class oneStudentPage_View(QMainWindow):
         #build view
         self.Frame1 = oneStudentFrame_View()
         self.upcomingFrame = upcomingEvent_view()
-        upcomingModel = upcomingEvent_Model()
 
-        #set Model
-        self.Frame1.setupUi(self.window.frame1)
-        self.upcomingFrame.setupUi(self.window.frame_2)
-        self.upcomingFrame.listView.setModel(upcomingModel)
+        #set Model when enter this page
+        self.Frame1 = oneStudentFrame_View()
+        self.Frame1.setupUi(self.window.oneStudentFrame1)
+        self.upcomingFrame.setupUi(self.window.oneStudentFrame2)
 
         
