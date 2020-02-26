@@ -1,7 +1,12 @@
 from ModulePage_View import modulePage_view
 from basicMainWindow_View import basicMainWindow_view
 from basicMainWindow_Ctr import basicMainWindow_Ctr
-
+from sessionPage_View import sessionPage_View
+from recordDialog_View import recordDialog_View
+from recordingPage_View import recordingPage_View
+from searchResult_View import searchResult_View
+from oneStudentPage_View import oneStudentPage_View
+from teacherInfoPage_View import teacherInfoPage_View
 '''Login Controller is used for create main Window and show corresponding frames based on the main Window'''
 
 class login_Ctr():
@@ -14,11 +19,27 @@ class login_Ctr():
         # create main window, set view and controller
         self.mainWindow = basicMainWindow_view()
         self.mainWindowCtr = basicMainWindow_Ctr()
-        self.mainWindowCtr.setView(self.mainWindow)
+        #pass login_Ctr to be able to get searchResult_View in mainwindowCtr
+        self.mainWindowCtr.setView(self.mainWindow, self)
 
         # pass main window to corresponding page class for use
+        # create each basic page
+        # information in each page will be loaded when change the page
         self.tmView = modulePage_view()
-        self.tmView.setMainWindow(self.mainWindow)
+        self.sessionView = sessionPage_View()
+        self.recordingPage_View = recordingPage_View()
+        self.searchResult_View = searchResult_View()
+        self.oneStudentPage_View = oneStudentPage_View()
+        self.teacherInfoPage_View = teacherInfoPage_View()
+        
+        self.tmView.setMainWindow(self.mainWindow, self)
+        self.sessionView.setMainWindow(self.mainWindow)
+        self.recordingPage_View.setMainWindow(self.mainWindow)
+        self.searchResult_View.setMainWindow(self.mainWindow, self)
+        self.oneStudentPage_View.setMainWindow(self.mainWindow)
+        self.teacherInfoPage_View.setMainWindow(self.mainWindow)
+        
+        
 
         self.mainWindowCtr.setWindow(self.tmView)
 
