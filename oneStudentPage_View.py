@@ -26,9 +26,10 @@ class oneStudentPage_View(QMainWindow):
         self.Frame1 = oneStudentFrame_View()
         self.upcomingFrame = upcomingEvent_view()
 
-        #set Model when enter this page
+        #have setted Model when enter this page
         self.Frame1 = oneStudentFrame_View()
         self.Frame1.setupUi(self.window.oneStudentFrame1)
         self.upcomingFrame.setupUi(self.window.oneStudentFrame2)
+        self.upcomingFrame.connectToRecord(self.window)
 
         

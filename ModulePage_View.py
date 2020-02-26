@@ -61,6 +61,7 @@ class modulePage_view(QMainWindow):
         #self.window.stackedWidget.addWidget(self.Frame1)
         self.upcomingFrame.setupUi(self.window.moduleFrame2)
         self.upcomingFrame.listView.setModel(upcomingModel)
+        self.upcomingFrame.connectToRecord(self.window)
         self.window.stackedWidget.setCurrentIndex(0)
 
     def goSession(self):

@@ -42,6 +42,7 @@ class sessionPage_View(QMainWindow):
         self.Frame1.refresh()
 
         self.upcomingFrame.setupUi(self.window.sessionFrame2)
+        self.upcomingFrame.connectToRecord(self.window)
         
     
     def recordDialog(self):

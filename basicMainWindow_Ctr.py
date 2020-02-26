@@ -2,6 +2,8 @@ from basicMainWindow_View import basicMainWindow_view
 from upcomingEvent_View import upcomingEvent_view
 from upcomingEvent_Model import upcomingEvent_Model
 from printFrame_View import printFrame_view
+from sessionFrame1_Model import sessionFrame1_model
+from sessionFrame1_Delegate import sessionFrame_delegate
 class basicMainWindow_Ctr():
 
     def __init__(self):
@@ -32,6 +34,14 @@ class basicMainWindow_Ctr():
         if self.bmView.stackedWidget.currentIndex() == 1: #session to module
             self.bmView.stackedWidget.setCurrentIndex(0)
         elif self.bmView.stackedWidget.currentIndex() == 2: #recoridng to session
+            #防止一开始从module界面的upcoming直接record, 返回时session界面为空
+            self.sessionModel = sessionFrame1_model()
+            self.sessionDelegate = sessionFrame_delegate()
+            self.logCtr.sessionView.Frame1.listView.setModel(self.sessionModel)
+            self.logCtr.sessionView.Frame1.listView.setItemDelegate(self.sessionDelegate)
+            self.upcomingModel = upcomingEvent_Model()
+            self.logCtr.sessionView.upcomingFrame.listView.setModel(self.upcomingModel)
+
             self.bmView.stackedWidget.setCurrentIndex(1)
         elif self.bmView.stackedWidget.currentIndex() == 4: #one student to general result
             self.bmView.stackedWidget.setCurrentIndex(3)

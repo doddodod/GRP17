@@ -35,9 +35,10 @@ class searchResult_View(QMainWindow):
         self.Frame1 = searchStudentFrame_View()
         self.upcomingFrame = upcomingEvent_view()
 
-        #set Model when enter the page
+        #have setted Model when enter the page
         self.Frame1.setupUi(self.window.resultFrame1)
         self.upcomingFrame.setupUi(self.window.resultFrame2)
+        self.upcomingFrame.connectToRecord(self.window)
     
         
         #Test Button

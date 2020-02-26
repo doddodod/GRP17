@@ -17,3 +17,4 @@ class teacherInfoPage_View(QMainWindow):
         self.Frame1 = teacherInfoFrame_View()
         self.Frame1.setupUi(self.window.teacherInfoFrame1)
         self.upcomingFrame.setupUi(self.window.teacherInfoFrame2)
+        self.upcomingFrame.connectToRecord(self.window)
