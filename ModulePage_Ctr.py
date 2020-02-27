@@ -1,20 +1,8 @@
-from basicMainWindow_View import basicMainWindow_view
-
-from basicMainWindow_Ctr import basicMainWindow_Ctr
-
-from sessionPage_View import sessionPage_View
-
 from sessionFrame1_Model import sessionFrame1_model
-
 from sessionFrame1_Delegate import sessionFrame_delegate
-
 from upcomingEvent_Model import upcomingEvent_Model
 
-from PyQt5.QtWidgets import QFrame
 
-from PyQt5 import QtCore, QtWidgets
-
-# TBC
 class ModulePage_ctr():
 
     def __init__(self):
@@ -45,7 +33,3 @@ class ModulePage_ctr():
         
         #change page
         self.mainwindow.stackedWidget.setCurrentIndex(1)
-
-        
-        
-        

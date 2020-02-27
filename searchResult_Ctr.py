@@ -1,10 +1,5 @@
-from basicMainWindow_View import basicMainWindow_view
-
-from basicMainWindow_Ctr import basicMainWindow_Ctr
-
 from oneStudentPage_View import oneStudentPage_View
-
-from upcomingEvent_View import upcomingEvent_view
+from oneStudentFrame_Model import oneStudentFrame_model
 
 from upcomingEvent_Model import upcomingEvent_Model
 
@@ -19,11 +14,11 @@ class searchResult_Ctr():
     
     def OneStudentInfo(self):
         print("One Student")
+        # set model for view in oneStudentPage_View
         self.upcomingModel = upcomingEvent_Model()
         self.searchResultView.logCtr.oneStudentPage_View.upcomingFrame.listView.setModel(self.upcomingModel)
-        '''
-        Load student info model here
-        self.searchResultView.logCtr.oneStudentPage_View.Frame1.listView
-        '''
+
+        self.studentAttendanceModel = oneStudentFrame_model()
+        self.searchResultView.logCtr.oneStudentPage_View.Frame1.attendance_listView.setModel(self.studentAttendanceModel)
+
         self.mainwindow.stackedWidget.setCurrentIndex(4)
-        

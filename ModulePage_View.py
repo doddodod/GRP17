@@ -37,7 +37,7 @@ class modulePage_view(QMainWindow):
         self.setupMyUI()
 
     def setupMyUI(self):
-        # connect with Ctr -TBC
+        # connect with Ctr
         self.modulePageCtr = ModulePage_ctr()
         self.modulePageCtr.setCtr(self, self.window)
 
@@ -52,7 +52,7 @@ class modulePage_view(QMainWindow):
         self.upcomingFrame = upcomingEvent_view()
         upcomingModel = upcomingEvent_Model()
 
-        # set model and delegate for views'''
+        # set model and delegate for views
         
         self.Frame1.setupUi(self.window.moduleFrame1)
         self.Frame1.listView.setModel(moduleModel)

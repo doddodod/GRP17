@@ -1,7 +1,8 @@
-from basicMainWindow_View import basicMainWindow_view
-from upcomingEvent_View import upcomingEvent_view
+from PyQt5.QtWidgets import QDialog
+
+from printDialog_View import printDialog_view
 from upcomingEvent_Model import upcomingEvent_Model
-from printFrame_View import printFrame_view
+
 class basicMainWindow_Ctr():
 
     def __init__(self):
@@ -88,6 +89,9 @@ class basicMainWindow_Ctr():
 
     def printInfo(self):
         print("print")
+        self.printDialog = printDialog_view()
+        self.printDialog.show()
+
         
 
 

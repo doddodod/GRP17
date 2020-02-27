@@ -1,6 +1,7 @@
 from recordingPage_View import recordingPage_View
 from basicMainWindow_View import basicMainWindow_view
 from basicMainWindow_Ctr import basicMainWindow_Ctr
+
 class recordDialog_ctr():
     def setCtr(self, recordDialogView, mainwindow):
         self.recordDialogView = recordDialogView
@@ -13,10 +14,5 @@ class recordDialog_ctr():
         
     def recording(self):
         print("start record")
-    
-      
         self.mainwindow.stackedWidget.setCurrentIndex(2)
         self.recordDialogView.hide()
-        
-        
-        
